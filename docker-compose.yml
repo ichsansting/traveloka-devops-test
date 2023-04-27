@@ -4,8 +4,16 @@ services:
     build: .
     ports:
       - "80:8080"
+      - "8080:8080"
     deploy:
         resources:
             limits:
               cpus: '1'
               memory: 512M
+  locust:
+    image: locustio/locust
+    ports:
+     - "8089:8089"
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py -H http://app:8080
