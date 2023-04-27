@@ -8,5 +8,5 @@ class UserTasks(TaskSet):
 
 class WebsiteUser(HttpUser):
     host = "http://localhost"
-    wait_time = between(1, 1)
+    # wait_time = between(1, 1)
     tasks = [UserTasks]
