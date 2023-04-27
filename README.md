@@ -32,7 +32,7 @@ Change branch and Run solution 2
 ```bash
 docker compose down
 git checkout solutions/task2
-docker compose up -d
+docker compose up -d --build
 ```
 
 there is a script for testing the crud operation, run by calling ./test_crud.sh
