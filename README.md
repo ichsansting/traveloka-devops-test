@@ -2,13 +2,17 @@ requirement:
 - docker
 
 This is a rust backend which show `hello world` on the root page
-Run the app once to test the hello world by calling ./run.sh
 
+why rust?
+in my understanding golang will be more suitable for backend service and devops overall, but i did read about how discord handle scaling on their message and their choice to change the source code to rust, that makes me interested in rust, so i make this test as an opportunity to try and learn it.
+
+Run the app once to test the hello world by calling ./run.sh
 To run the project, use `docker compose up` and the app will be run on port 80 on the host machine<br/>
 it will also running locust for doing the load test, open http://localhost:8089 to open locust
 
-I publish two port for the hello world app (80 and 8080) because the locust container can't connect to port 80.
+I publish two port for the hello world app (80 and 8080) because the locust container can't connect to port 80 (i think it's because i'm using codespace).
 
+In the solution 2, there is a script for testing the crud operation, run by calling ./test_crud.sh
 
 Potential Improvements:
 - better error handling, currently error handling is not that much needed for this simple app
