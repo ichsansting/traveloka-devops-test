@@ -14,6 +14,21 @@ I publish two port for the hello world app (80 and 8080) because the locust cont
 
 In the solution 2, there is a script for testing the crud operation, run by calling ./test_crud.sh
 
+Run the app
+```bash
+docker compose up -d
+```
+
+Scale up the app to 2
+```bash
+docker compose up -d --scale app=2
+```
+
+Scale down the app back to 1
+```bash
+docker compose up -d --scale app=1
+```
+
 Potential Improvements:
 - better error handling, currently error handling is not that much needed for this simple app
 - better folder structure, like make the url path is also can be seen on the filename/foldering, so people can easily understand about the flow on the project
