@@ -56,7 +56,7 @@ docker compose up -d --scale app=1
 Rollback
 ```bash
 git checkout solutions/task1
-docker compose up --build
+docker compose up -d --build
 ```
 The easiest way is just to change the branch and then re build the image, the better approach is to tagging the docker image and then use docker-compose variable to switch between versions, but i think in this scenario changing the version frequently is not necessary.
 
